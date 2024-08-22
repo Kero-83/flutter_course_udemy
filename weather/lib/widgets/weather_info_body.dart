@@ -33,7 +33,7 @@ class WeatherInfoBody extends StatelessWidget {
                 'assets/images/cloudy.png',
               ),
               const Text(
-                '17',
+                '17°',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 32,
@@ -42,13 +42,13 @@ class WeatherInfoBody extends StatelessWidget {
               const Column(
                 children: [
                   Text(
-                    'Maxtemp: 24',
+                    'Max: 24°',
                     style: TextStyle(
                       fontSize: 16,
                     ),
                   ),
                   Text(
-                    'Mintemp: 16',
+                    'Min: 16°',
                     style: TextStyle(
                       fontSize: 16,
                     ),

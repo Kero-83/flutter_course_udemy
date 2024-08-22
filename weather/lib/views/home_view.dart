@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather/widgets/no_weather_body.dart';
+import 'package:weather/views/search_view.dart';
+import 'package:weather/widgets/weather_info_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -9,8 +10,17 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather App'),
+        actions: [
+          GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => SearchView(),
+                    ),
+                  ),
+              child: const Icon(Icons.search))
+        ],
       ),
-      body: const NoWeatherBody(),
+      body: const WeatherInfoBody(),
     );
   }
 }
